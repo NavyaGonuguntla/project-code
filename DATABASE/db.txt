@@ -1,0 +1,47 @@
+
+CREATE DATABASE IF NOT EXISTS captcha;
+USE captcha;
+
+
+-- Definition of table `downloads`
+
+
+DROP TABLE IF EXISTS `downloads`;
+CREATE TABLE `downloads` (
+  `iddownloads` int(10) unsigned NOT NULL auto_increment,
+  `filename` varchar(45) NOT NULL default '',
+  `name` varchar(45) NOT NULL default '',
+  `time` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`iddownloads`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Definition of table `file`
+
+CREATE TABLE `file` (
+  `idfile` int(10) unsigned NOT NULL auto_increment,
+  `filename` varchar(45) NOT NULL default '',
+  `file` longblob NOT NULL,
+  `owner` varchar(45) NOT NULL default '',
+  `x1` varchar(10) NOT NULL default '',
+  `y1` varchar(10) NOT NULL default '',
+  `x2` varchar(10) NOT NULL default '',
+  `y2` varchar(10) NOT NULL default '',
+  `time` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`idfile`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Definition of table `user_reg`
+
+CREATE TABLE `user_reg` (
+  `iduser_reg` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(45) NOT NULL default '',
+  `name` varchar(45) NOT NULL default '',
+  `password` varchar(45) NOT NULL default '',
+  `mail` varchar(45) NOT NULL default '',
+  `phoneno` varchar(45) NOT NULL default '',
+  `activate` varchar(45) NOT NULL default '',
+  `image_word` varchar(45) NOT NULL default '',
+  `anum` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`iduser_reg`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
